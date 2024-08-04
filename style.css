@@ -11,7 +11,7 @@ body {
 }
 .main {
   height: 70rem;
-  background-image: url("hello/bg.jpg");
+  background-image: url("images/bg.jpg");
   position: relative;
   background-repeat: no-repeat;
   background-size: cover; /* Adjust based on your design preference */
@@ -37,9 +37,8 @@ nav {
   height: 6.6rem;
   padding-top: 1.5rem;
 }
-nav div img {
-  color: red;
-  width: 1.2rem;
+#logo{
+  width: 18rem;
 }
 .flex,
 .opt {
@@ -163,11 +162,6 @@ option {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 1113px) {
-  .first {
-    flex-wrap: wrap;
-  }
-}
 .text1 {
   display: flex;
   gap: 1.5rem;
@@ -189,11 +183,12 @@ option {
   position: relative;
 }
 .tv1 img {
-  width: 5.7rem;
+  width: 57rem;
   position: relative;
   z-index: 2;
 }
 .tv1 video {
+  width: 48rem;
   position: absolute;
   top: 7.6rem;
   right: 1.5rem;
@@ -217,43 +212,69 @@ option {
   display: flex;
   flex-direction: column;
   color: #ffffff;
-
-  margin: 47px 0px;
+  gap: 1rem;
+  
+  margin: 4.7rem 2rem;
 }
 .faq > span {
   text-align: center;
-  font-size: 48px;
+  font-size: 4.8rem;
   font-weight: 900;
 }
-.faqbox {
+.faqbox{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
   display: flex;
   width: 74vw;
-  margin: 4px auto;
-  padding: 19px;
-  justify-content: space-between;
-  background-color: rgb(45, 45, 45);
-  font-size: 24px;
+  margin: auto;
+  /* padding: 1.9rem; */
+  /* background-color: rgb(45, 45, 45); */
+  font-size: 2.4rem;
   font-weight: 400;
   cursor: pointer;
 }
-.faqbox:hover {
+.faqbox__disp {
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+  width: 74vw;
+  padding: 1.9rem;
+  justify-content: space-between;
+  background-color: rgb(45, 45, 45);
+  font-size: 2.4rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.faqbox p{
+  transition: 2.2s cubic-bezier(.36,-0.01,0,.77);
+  box-sizing: border-box;
+  text-align: left;
+  padding: 1.9rem;
+  line-height:4rem;
+  background-color: rgb(45, 45, 45);
+  display: none;
+}
+
+.faqbox__disp:hover {
+  
   background-color: rgb(63, 63, 63);
 }
 .faq span:nth-child(8) {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
-  margin-top: 40px;
+  margin-top: 4rem;
 }
 footer {
   color: rgba(255, 255, 255, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
-  padding: 15px 11vw;
+  gap: 2rem;
+  padding: 1.5rem 11vw;
   /* max-width: 75vw; */
-  margin: 50px auto;
+  margin: 5rem auto;
 }
 .footer {
   display: grid;
@@ -265,9 +286,48 @@ footer {
 }
 .item a {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-  margin: 4px 0px;
+  font-size: 1.4rem;
+  margin: 0.4rem 0px;
 }
 footer span {
-  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1000px) {
+  *{
+    text-align: center;
+  }
+  .text1 :first-child {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: auto;
+}
+  nav{
+    max-width:95vw;
+  }
+  .first{
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 725px) {
+  html{
+    font-size: 7px;
+  }
+}
+@media screen and (max-width: 550px){
+  .hi{
+
+    margin-top:9rem;
+  }
+  #logo{
+    padding: 1rem;
+    width: 20rem;
+  }
+  html{
+    font-size: 6px;
+  }
+  .b{
+    flex-direction: column;
+  }
 }
