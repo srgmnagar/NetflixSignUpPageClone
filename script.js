@@ -1,8 +1,8 @@
 let faqboxes = document.querySelectorAll(".faqbox__disp");
 let paragraphs = document.querySelectorAll(".faqbox p");
 
-faqboxes.forEach((faqbox, i) => {
-    faqbox.addEventListener("click", () => {
+faqboxes.forEach((i) => {
+    faqboxes[i].addEventListener("click", () => {
         let p = paragraphs[i];
         if (p.style.display === "none") {
             p.style.display = "block"; 
